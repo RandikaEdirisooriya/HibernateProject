@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #07EBBB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controller.MainFormController">
+   <children>
+      <Separator layoutX="-1.0" layoutY="59.0" prefHeight="14.0" prefWidth="600.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+      <Label layoutX="211.0" layoutY="7.0" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Student Form">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="StudentIdTextFeild" layoutX="42.0" layoutY="77.0" prefHeight="26.0" prefWidth="198.0" promptText="Student Id" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+      <TextField fx:id="FirstnameTextFeild" layoutX="42.0" layoutY="107.0" prefHeight="26.0" prefWidth="198.0" promptText="First Name" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+      <TextField fx:id="LastnameTextFeild" layoutX="342.0" layoutY="77.0" prefHeight="26.0" prefWidth="198.0" promptText="Last Name" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+      <TextField fx:id="EmailTextFeild" layoutX="42.0" layoutY="137.0" prefHeight="26.0" prefWidth="198.0" promptText="Email" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+      <TextField fx:id="ContactNumberTextFeild" layoutX="342.0" layoutY="107.0" prefHeight="26.0" prefWidth="198.0" promptText="Contact number" styleClass="shadow" stylesheets="@../Style/Shadow.css" />
+      <Button fx:id="SaveBtn" layoutX="34.0" layoutY="359.0" mnemonicParsing="false" onAction="#SaveBtnOnaction" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #0fc941;" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Save" />
+      <Button layoutX="181.0" layoutY="360.0" mnemonicParsing="false" onAction="#updatebuttonOnAction" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #0fc941;" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Update" />
+      <Button layoutX="341.0" layoutY="360.0" mnemonicParsing="false" onAction="#DeleteButtonOnAction" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #0fc941;" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Delete" />
+      <Button layoutX="491.0" layoutY="360.0" mnemonicParsing="false" onAction="#ClearButtonOnAction" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #0fc941;" styleClass="shadow" stylesheets="@../Style/Shadow.css" text="Clear" />
+      <TableView fx:id="tbl_student" layoutX="5.0" layoutY="180.0" prefHeight="167.0" prefWidth="587.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Student_ID" />
+          <TableColumn fx:id="firstname" prefWidth="135.99994659423828" text="First Name" />
+            <TableColumn fx:id="lastname" prefWidth="92.00006103515625" text="Last Name" />
+            <TableColumn fx:id="email" prefWidth="154.39996337890625" text="Email" />
+            <TableColumn fx:id="contact" prefWidth="129.60000610351562" text="Contact Number" />
+        </columns>
+         <stylesheets>
+            <URL value="@../Style/Shadow.css" />
+            <URL value="@../Style/tble.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="shadow" />
+            <String fx:value="table-cell" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>
